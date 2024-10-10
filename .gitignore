@@ -1,0 +1,29 @@
+# Ignorer tous les fichiers swap
+*~
+
+#Ignorer dossier IDE
+.idea/*
+
+# Ignorer le dossier node_modules
+/node_modules/*
+
+# Ignorer le dossier dist
+/dist/*
+
+# Ignorer le fichier dist compressé
+dist.zip
+
+# Ignorer le dossier output
+/output/*
+
+# Ignorer l'entree preprocesseur du fm
+/css/*.css
+
+# Ignorer la generation du fichier index.html
+index.html
+
+# ignorer les fichiers htaccess
+.htaccess
+
+# ignorer le fichier de config
+./content/cnx.js

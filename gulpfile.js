@@ -1,33 +1,36 @@
 'use strict';
 
-const {src, dest, series, watch, lastRunn} = require('gulp');
-let webpackStream = require('webpack-stream');
+const {src, dest, series, watch, lastRun, parallel} = require('gulp');
+const webpackStream = require('webpack-stream');
 const gulpSass = require('gulp-sass')(require('sass'));
-let gulpTwig = require('gulp-twig');
-let content = require('./content/content');
-let imagemin = require('gulp-imagemin');
-let gulpClean = require('gulp-clean');
+const gulpTwig = require('gulp-twig');
+const content = require('./content/content');
 const del = require('delete');
-let gulpRobots = require('gulp-robots');
-let gulpFavicons = require("favicons").stream;
-let log = require('fancy-log');
-const inject = require('gulp-inject');
-const file = require('gulp-file');
+const cache = require('gulp-cache');
+const imagemin = require('gulp-imagemin');
+const gulpRobots = require('gulp-robots');
+const favicons = require('favicons');
+const log = require('fancy-log');
 const path = require('path');
 const fs = require('fs');
-const favicons = require('favicons');
-let useref = require('gulp-useref'),
-    gulpif = require('gulp-if'),
-    uglify = require('gulp-uglify-es').default,
-    minifyCss = require('gulp-clean-css');
-let livereload = require('gulp-livereload');
-let zip = require('gulp-zip');
-let git = require('gulp-git');
-let cnx = require('./content/cnx');
-let ftp = require( 'vinyl-ftp' );
+const file = require('gulp-file');
+const inject = require('gulp-inject');
+const useref = require('gulp-useref');
+const gulpif = require('gulp-if');
+const terser = require('gulp-terser');
+const minifyCss = require('gulp-clean-css');
+const livereload = require('gulp-livereload');
+const zip = require('gulp-zip');
+const git = require('gulp-git');
+const cnx = require('./content/cnx');
+const ftp = require( 'vinyl-ftp' );
+
+function getSrc(globPattern, options = {}) {
+    return src(globPattern, { sourcemaps: true,  ...options });
+}
 
 function webpack() {
-    return src('js/*.js')
+    return getSrc('js/*.js', { since: lastRun(webpack)})
         .pipe(webpackStream({
             mode: "development",
             output: {
@@ -38,13 +41,13 @@ function webpack() {
 }
 
 function sass() {
-    return src('./sass/materialize.scss')
+    return getSrc('./sass/materialize.scss', { since: lastRun(sass) })
         .pipe(gulpSass())
-        .pipe(dest('./css'));
+        .pipe(dest('./css', { sourcemaps: true }));
 }
 
 function twig() {
-    return src('./templates/index.twig')
+    return getSrc('./templates/index.twig', { since: lastRun(twig) })
         .pipe(gulpTwig({
             data: content
         }))
@@ -55,24 +58,28 @@ function clean() {
     return del(['css', 'output', 'index.html']);
 }
 
-function img() {
-    return src('img/**/*', {since: lastRunn})
-        .pipe(imagemin())
-        .pipe(dest('dist/img'));
+async function img() {
+    try {
+        return getSrc('img/**/*', { since: lastRun(img) })
+            .pipe(cache(imagemin()))
+            .pipe(dest('dist/img'));
+    } catch (error) {
+        console.error('Error in img task:', error);
+    }
 }
 
 function fonts() {
-    return src("fonts/**/*.*")
+    return getSrc("fonts/**/*.*", { since: lastRun(fonts) })
         .pipe(dest('dist/fonts'));
 }
 
 function files() {
-    return src("files/**/*.*")
+    return getSrc("files/**/*.*", { since: lastRun(files) })
         .pipe(dest('dist/files'));
 }
 
 function robots() {
-    return src('index.html')
+    return getSrc('index.html', { since: lastRun(robots) })
         .pipe(gulpRobots({
             useragent: '*',
             allow: [],
@@ -147,7 +154,7 @@ function injectFavicons() {
     const faviconFile = file('./dist/favicon.html', fs.readFileSync(faviconHtmlPath), { src: true });
 
     // Cible : index.html où nous allons injecter les favicons
-    return src('./index.html', {read: true})
+    return getSrc('./index.html', {since: lastRun(injectFavicons), read: true})
         .pipe(inject(faviconFile, {
             starttag: '<!-- inject:head:html -->',
             transform: function (filePath, file) {
@@ -158,10 +165,10 @@ function injectFavicons() {
 }
 
 function dist() {
-    src(['.htaccess', 'sitemap.xml']).pipe(dest('dist'));
-    return src('index.html')
+    getSrc(['.htaccess', 'sitemap.xml'], { since: lastRun(dist) }).pipe(dest('dist'));
+    return getSrc('index.html', { since: lastRun(dist) })
         .pipe(useref())
-        // .pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif('*.js', terser()))
         .pipe(gulpif('*.css', minifyCss()))
         .pipe(dest('./dist'));
 }
@@ -174,45 +181,60 @@ function watcher() {
 }
 
 function prod() {
-    return src('dist/*')
+    return getSrc('dist/*', { since: lastRun(prod) })
     .pipe(zip('dist.zip'))
     .pipe(dest('.'));
 }
 
-function push() {
-    return git.push('origin', 'master', function (err) {
-        if (err) throw err;
-    });
+async function push() {
+    try {
+        await git.push('origin', 'master');
+        console.log('Pushed successfully');
+    } catch (err) {
+        console.error('Error during git push:', err);
+    }
 }
 
-function deploy() {
+async function deploy() {
     let globs = [
         'dist/**',
     ];
 
     cnx.log = log;
-    let conn = ftp.create( cnx );
+    try {
+        var conn = await ftp.create( cnx );
+        console.log('connected to ftp');
+    } catch (err) {
+        console.error('Error during connecting to ftp:', err);
+    }
 
     // using base = '.' will transfer everything to /public_html correctly
     // turn off buffering in gulp.src for best performance
 
-    return src( globs, { base: 'dist/', buffer: false, matchBase: true } )
-        .pipe( conn.newer( '/public_html' ) ) // only upload newer files
-        .pipe( conn.dest( '/public_html' ) );
+    try {
+        return getSrc( globs, { since: lastRun(deploy), base: 'dist/', buffer: false, matchBase: true } )
+            .pipe( conn.newer( '/public_html' ) ) // only upload newer files
+            .pipe( conn.dest( '/public_html' ) );
+    } catch (error) {
+        console.error('Error in deploy task:', error);
+    }
 
 }
 
+function clearCache(done) {
+    return cache.clearAll(done);
+}
+
+const build = parallel(sass, twig, webpack);
+
 module.exports = {
-    webpack,
-    sass,
-    twig,
+    build,
+    dist: series(build, img, fonts, files, generateFavicons, injectFavicons, robots, dist, clean),
+    watch: series(clean, watcher),
+    prod,
+    deploy,
+    push,
     clean,
     img,
-    fonts,
-    files,
-    robots,
-    favicons: series(generateFavicons, injectFavicons),
-    dist: series(webpack, sass, twig, img, fonts, files, generateFavicons, injectFavicons, robots, dist, clean),
-    watch: series(clean, watcher),
-    prod
+    clearCache
 }
