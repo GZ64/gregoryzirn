@@ -1,0 +1,102 @@
+#competences {
+  background: rgba(255, 255, 255, 0.7); /* blanc opaque */
+  .carousel-container {
+    position: relative;
+    .gauche, .droite {
+      position: absolute;
+      top: 124%;
+    }
+    .droite {
+      left: 87%;
+    }
+    .gauche {
+      left: 15.5%;
+    }
+    .carousel {
+      overflow: visible;
+      .carousel-item {
+        .single-skill {
+          float: right;
+          height: 360px;
+          width: 50px;
+          position: relative;
+          .singel-hr-inner {
+            background-color: $primary-color;
+            position: absolute;
+            width: 100%;
+            bottom: 33px;
+            height: 0;
+            @include transition-property(height);
+            @include transition-duration(1.2s);
+            @include transition-timing-function(cubic-bezier(0.7,0,0.3,1));
+            .skill-title {
+              position: absolute;
+              top: -50px;
+              right: calc(50% - 50px);
+              width: 100px;
+              .hr {
+                height: 80px;
+                width: 1px;
+                position: absolute;
+                left: 50%;
+                top: 25px;
+                background-color: $primary-color;
+                .point:after {
+                  content: '';
+                  width: 7px;
+                  height: 7px;
+                  position: absolute;
+                  border-radius: 50%;
+                  left: -3px;
+                  background-color: $primary-color;
+                }
+              }
+            }
+          }
+        }
+        .score {
+          position: absolute;
+          bottom: -160px;
+          right: 10px;
+        }
+      }
+    }
+  }
+  @media #{$medium-and-down} {
+    .carousel-container {
+      bottom: 45px;
+      .gauche, .droite {
+        top: 90%;
+      }
+      .droite {
+        left: 92%;
+      }
+      .gauche {
+        left: 0;
+      }
+    }
+  }
+  .score-mobile {
+    position: relative;
+    z-index: 1;
+  }
+  .progress-bar {
+    position: relative;
+  }
+  .progress-bg, .progress-skill {
+    position: absolute;
+    height: 20px;
+  }
+  .progress-bg {
+    background-color: $table-border-color;
+    width: 100%;
+    text-align: center;
+  }
+  .progress-skill {
+    background-color: $primary-color;
+    width: 0;
+    @include transition-property(width);
+    @include transition-duration(1.2s);
+    @include transition-timing-function(cubic-bezier(0.7,0,0.3,1));
+  }
+}

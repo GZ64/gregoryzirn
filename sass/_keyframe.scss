@@ -1,0 +1,9 @@
+@include keyframe(cardIn) {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

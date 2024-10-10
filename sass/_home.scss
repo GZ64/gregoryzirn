@@ -1,0 +1,23 @@
+#home {
+  background: rgba(0,0,0, 0.5);
+  div.presentation {
+    height: 100%;
+    div {
+      margin: auto;
+    }
+  }
+  .presentation {
+    #nom {
+      color: $primary-color;
+      font-size: 72px;
+      font-family: 'kaushan_script', cursive;
+    }
+    h1 {
+      color: #fff;
+      font-size: 18px;
+      margin: auto;
+      text-transform: uppercase;
+      line-height: 60px;
+    }
+  }
+}

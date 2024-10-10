@@ -1,0 +1,42 @@
+#qui_suis_je {
+  #greg {
+    margin-top: 50px;
+  }
+  @media #{$medium-and-down} {
+    #greg {
+      float: left;
+    }
+  }
+  .reseaux-sociaux {
+    ul li {
+      text-align: center;
+    }
+    margin-top: 60px;
+    a.facebook, a.twitter, a.google, a.linkedin {
+      text-align: center;
+    }
+    a.facebook, a.twitter, a.google {
+      padding-top: 7px;
+    }
+    a.linkedin {
+      padding-top: 5px;
+    }
+  }
+  @media #{$medium-and-down} {
+    .reseaux-sociaux {
+      margin-right: inherit;
+      position: relative;
+      right: 110%;
+      bottom: 105px;
+    }
+  }
+  @media #{$small-and-down} {
+    .reseaux-sociaux {
+      position: inherit;
+    }
+  }
+  .icon-facebook, .icon-linkedin2, .icon-twitter, .icon-google-plus {
+    font-size: 28px;
+    color: $primary-color;
+  }
+}

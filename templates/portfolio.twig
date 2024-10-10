@@ -1,0 +1,56 @@
+<div class="container valign">
+    <div class="row">
+        <h3 class="left-align">PORTFOLIO</h3>
+        <div class="col s12 flow-text white-text">{{ introProjets }}</div>
+
+        <div id="glide" class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul id="creation" class="   glide__slides">
+                    {% for portfolio in portfolios %}
+                        <li class="s6 m6 glide__slide card small">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="{{ portfolio.src }}"
+                                     alt="{{ portfolio.alt }}"/>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-2 truncate">
+                                    {{ portfolio.title }}
+                                </span>
+                                <i class="material-icons right">more_vert</i>
+                                <p class="grey-text text-darken-2 left-align">
+                                    <a class="card-link" href="{{ portfolio.link }}" target="_blank">
+                                        <i class="material-icons eyeIcon">remove_red_eye</i>
+                                    </a>
+                                    {% if portfolio.gitlab %}
+                                        <a class="card-link" href="{{ portfolio.gitlab }}" target="_blank">
+                                            <i class="material-icons">code</i>
+                                        </a>
+                                    {% endif %}
+                                </p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-2">{{ portfolio.title }}<i
+                                            class="material-icons right">close</i></span>
+                                <p class="grey-text text-darken-2 left-align">{{ portfolio.content }}</p>
+                                <ul class="collection grey-text text-darken-2">
+                                    {% for detail in portfolio.details %}
+                                        <li class="collection-item">{{ detail }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left left" data-glide-dir="<">prev</button>
+                <button class="glide__arrow glide__arrow--right right" data-glide-dir=">">next</button>
+            </div>
+            <div class="glide__bullets hide-on-small-only" data-glide-el="controls[nav]">
+                {% for portfolio in portfolios %}
+                    <button class="glide__bullet" data-glide-dir="={{ loop.index0 }}"></button>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
