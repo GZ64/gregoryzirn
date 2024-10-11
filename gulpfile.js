@@ -181,7 +181,7 @@ function watcher() {
 }
 
 function prod() {
-    return getSrc('dist/*', { since: lastRun(prod) })
+    return getSrc('dist/**/*', { since: lastRun(prod) })
     .pipe(zip('dist.zip'))
     .pipe(dest('.'));
 }
