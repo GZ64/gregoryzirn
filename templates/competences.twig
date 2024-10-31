@@ -1,0 +1,49 @@
+<div class="parallax valign"><img src="img/competences_gregory.jpg" class="responsive-img" alt="Compétences Grégory" /></div>
+<div class="container valign">
+    <div class="row">
+        <h3 class="left-align">COMPETENCES</h3>
+        <div class="col m12 l4">
+            <p class="flow-text grey-text text-darken-2">{{ resume }}</p>
+        </div>
+        <div class="col m12 l8 carousel-container hide-on-small-only">
+            <a href="#" class="gauche btn-floating btn-large waves-effect waves-light"><i class="material-icons">keyboard_arrow_left</i></a>
+            <div class="carousel">
+                {% for skill in skills %}
+                    <a class="carousel-item card-link" href="#one!">
+                        <div class="single-skill">
+                            <div id="{{ skill.name }}" class="singel-hr-inner">
+                                <div class="skill-title center-align">
+                                    <strong>{{ skill.name | replace({'_': ' '}) | upper }}</strong>
+                                    <div class="hr">
+                                        <div class="point"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="score">{{ skill.score }}%</span>
+                    </a>
+                {% endfor %}
+            </div>
+            <a href="#" class="droite btn-floating btn-large waves-effect waves-light"><i class="material-icons">keyboard_arrow_right</i></a href="#">
+        </div>
+        <div class="col s12 show-on-small hide-on-med-and-up">
+            {% for skill in skills %}
+                <div class="row">
+                    <div class="col s6">
+                        <strong>{{ skill.name | replace({'_': ' '}) | upper }}</strong>
+                    </div>
+                    <div class="col s6">
+                        <div class="progress-bar">
+                            <div class="progress-bg">
+                                <span class="score-mobile">{{ skill.score }}%</span>
+                            </div>
+                            <div id="{{ skill.name }}_mobile" class="progress-skill">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

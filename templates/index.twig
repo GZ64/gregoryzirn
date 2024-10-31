@@ -1,0 +1,57 @@
+{% extends "layout.twig" %}
+
+{% block body %}
+		<header>
+            {% include 'header.twig' %}
+		</header>
+
+        <!-- 	===================================================================
+                ============================= HOME ================================
+                =================================================================== -->
+
+		<section id="home" class="section scrollspy parallax-container center-align">
+            {% include 'home.twig' %}
+		</section>
+    </span> <!-- fin balisage des microdonnees -->
+    <a href="#" class="btn-floating btn-large waves-effect waves-light suite"><i class="material-icons">keyboard_arrow_down</i></a>
+
+    <!-- 	===================================================================
+            ======================== QUI SUIS-JE ? ============================
+            =================================================================== -->
+
+    <section id="qui_suis_je" class="section scrollspy">
+        {% include 'qui_suis_je.twig' %}
+    </section>
+
+    <!-- 	===================================================================
+            =========================== COMPETENCES ===========================
+            =================================================================== -->
+
+    <section id="competences" class="section scrollspy parallax-container" >
+        {% include 'competences.twig' %}
+    </section>
+
+    <!-- 	===================================================================
+            ====================== PORTFOLIO ==================================
+            =================================================================== -->
+
+    <section id="portfolio" class="section scrollspy" >
+        {% include 'portfolio.twig' %}
+    </section>
+
+    <!-- 	===================================================================
+            ====================== CERTIFICATIONS =============================
+            =================================================================== -->
+
+    <section id="certifications" class="section scrollspy" >
+        {% include 'certifications.twig' %}
+    </section>
+
+    <!-- 	===================================================================
+            ======================= FOOTER ===================================
+            =================================================================== -->
+
+    <footer class="section scrollspy page-footer">
+        {% include 'footer.twig' %}
+    </footer>
+{% endblock %}

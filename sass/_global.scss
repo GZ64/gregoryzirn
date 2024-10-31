@@ -1,0 +1,55 @@
+body {
+  overflow-x: hidden;
+}
+
+h5 {
+  border-bottom: $title-border;
+  padding: 15px;
+}
+
+p {
+  text-align: justify;
+}
+
+#qui_suis_je strong,
+#competences strong,
+#certifications strong {
+  color: $primary-color
+}
+#portfolio > strong {
+  color: #fff;
+}
+.collection-item strong {
+  color: $primary-color
+}
+
+/* bouton home */
+.suite {
+  bottom: 30px;
+  left: calc(50% - 27.5px);
+  transform: translate(-700px);;
+  @include transition(transform 1s ease-out 1s);
+}
+
+#portfolio h3, #contact h3 {
+  color: #fff;
+}
+
+#competences.parallax-container {
+  height: inherit;
+}
+
+.card-link {
+  color: $primary-color;
+}
+
+@media screen and (max-width: 300px)
+{
+  .card.small {
+    height: 250px;
+  }
+}
+
+.card .card-title {
+  font-size: rem-calc(20);
+}
