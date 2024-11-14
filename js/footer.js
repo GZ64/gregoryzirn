@@ -9,7 +9,7 @@ export function footer() {
     let facebookButton = document.getElementById('facebook');
     let twitterButton = document.getElementById('twitter');
     linkedinButton.addEventListener('click', () => {
-        let linkedinLink = document.querySelector('.IN-widget span span a');
+        let linkedinLink = document.querySelector('.IN-widget span button');
         linkedinLink.click();
     });
     facebookButton.addEventListener('click', () => {

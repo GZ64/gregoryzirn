@@ -2,47 +2,39 @@ module.exports = {
     title: 'Grégory Zirn',
     age: '43ans',
     phone: '07.45.09.09.72',
-    mail: 'contact@gregoryzirn.fr',
-    street: '1 rue Saint Louis',
-    zipCode: '35500',
-    city: 'Vitré',
+    mail: 'gregoryzirn@gmail.com',
     country: 'FRANCE',
+    linkedin: 'https://www.linkedin.com/in/gregory-zirn/',
+    github: 'https://github.com/GZ64/',
     subTitle: 'Développeur web - Symfony - React.js',
-    intro: 'Développeur web full-stack avec plus de 6 ans d’expérience, je propose mes services pour accompagner votre entreprise dans le développement de solutions web sur mesure. Spécialisé en front-end et back-end, j’ai une expertise approfondie en HTML, CSS, Javascript (ES6), React, Symfony, et PHP. Je peux intervenir sur l’ensemble du cycle de vie d’un projet, de la conception à la mise en production, en passant par l’intégration continue et l\'optimisation des performances.\n' +
-        '\n' +
-        'Mes expériences professionnelles chez FIFTY-FIVE, LE POINT, et MOSAIC m’ont permis de travailler dans des environnements complexes et d’apporter des solutions à des problématiques techniques variées, telles que :\n' +
-        '\n' +
-        'Développement d’applications web performantes et optimisées.\n' +
-        'Implémentation d’A/B tests pour améliorer les taux de conversion.\n' +
-        'Tracking et analyse des données pour mieux comprendre les comportements utilisateurs.\n' +
-        'Gestion et optimisation de sites web en respectant les standards SEO et les réglementations RGPD.\n' +
-        'Je suis à l’écoute de vos besoins et peux m’adapter à vos outils existants pour garantir la réussite de vos projets. Si vous cherchez un professionnel réactif, capable de s’intégrer rapidement dans votre équipe ou de travailler en autonomie, je serais ravi d’échanger avec vous sur vos objectifs et comment nous pouvons les atteindre ensemble.',
-    resume: 'Après un long parcours de formations et une expérience en agence, je maîtrise les technologies du web les plus demandées par les entreprises. Mes connaissances sont d’une part axées sur le code,  et d’autres part sur la gestions de projets.J’utilise aussi des outils de web-design, UX/UI design pour mes besoin personnels. Voici une présentation des niveau de compétences.',
+    intro: 'Développeur web expérimenté, je me spécialise dans la création de solutions digitales robustes et innovantes. Depuis 2017, je mets en œuvre mes compétences pour concevoir des sites web et des applications répondant aux besoins spécifiques de chaque client, en me concentrant sur l\'expérience utilisateur et la performance. Mon expertise technique s\'étend du développement front-end au back-end, avec une approche centrée sur l\'optimisation et la maintenabilité des projets. Fort d\'une licence de chef de projet obtenue en 2018, je suis toujours à l\'écoute de nouvelles opportunités dans le secteur numérique pour apporter mon expertise dans des projets ambitieux et collaboratifs. Ma passion pour les technologies modernes et mon engagement dans chaque mission assurent un résultat à la hauteur des exigences actuelles du marché digital.',
+    resume: 'Mon parcours m\'a permis de maîtriser un large éventail de compétences techniques et professionnelles. En front-end, je me spécialise en HTML, CSS, JavaScript (ES6), et frameworks modernes comme React et AngularJS. En back-end, mes compétences en PHP, Symfony, et Node.js me permettent de développer des applications robustes et scalables. Je suis également expérimenté en gestion de bases de données MySQL, administration de systèmes Linux, et en intégration continue avec Docker et Git.',
+    contact:'Je suis actuellement disponible et prêt à m\'engager sur de nouveaux projets en développement web. Ouvert aux opportunités, je suis enthousiaste à l\'idée de mettre mes compétences et mon expérience au service de missions stimulantes et de rejoindre une équipe ambitieuse. N\'hésitez pas à me contacter pour discuter de vos besoins en matière de développement ou pour toute collaboration professionnelle.',
     skills: [
-        {name: 'symfony', score: '60'},
-        {name: 'reactjs', score: '70'},
-        {name: 'redux', score: '30'},
-        {name: 'SSR', score: '30'},
-        {name: 'sass', score: '90'},
-        {name: 'gulp', score: '70'},
-        {name: 'html_css', score: '90'},
-        {name: 'es_6', score: '70'},
+        {name: 'symfony', score: '90'},
+        {name: 'react', score: '90'},
         {name: 'node_js', score: '70'},
-        {name: 'angular_js', score: '40'},
-        {name: 'vue_js', score: '40'},
         {name: 'php', score: '70'},
         {name: 'mysql', score: '70'},
-        {name: 'bootstrap', score: '80'},
-        {name: 'materialize', score: '90'},
+        {name: 'es_6', score: '70'},
         {name: 'linux', score: '70'},
-        {name: 'photoshop', score: '30'}
+        {name: 'docker', score: '60'},
+        {name: 'git', score: '80'},
+        {name: 'bit_bucket', score: '60'},
+        {name: 'jira', score: '40'},
+        {name: 'sass', score: '90'},
+        {name: 'webpack', score: '70'},
+        {name: 'gulp', score: '70'},
+        {name: 'bootstrap', score: '90'},
+        {name: 'materialize', score: '90'},
+        {name: 'gimp', score: '40'},
+        {name: 'inkscape', score: '40'}
     ],
-    introProjets: 'Mes premiers projets m\'ont permis d\'expérimenter le développement web (architecture MVC, projets orientés objets). Ensuite j’ai participé a la réalisation de projets bien plus innovant (produits bancaires, réservations d’espaces de travail, Interface de suivi des crypto-monnaies).',
+    introProjets: 'Bienvenue dans mon portfolio ! Vous y découvrirez une sélection de projets démontrant mon expertise technique et ma capacité à résoudre des problématiques complexes dans le développement de sites et d’applications web. Chaque projet met en avant des compétences en front-end et en back-end, des intégrations performantes, et des optimisations UX et SEO. Que ce soit à travers le développement de nouvelles fonctionnalités, la creation, ou encore l\'optimisation et le design d\'applications, j’y présente les solutions apportées à mes clients pour répondre à leurs objectifs spécifiques. Bonne visite, et n\'hésitez pas à me contacter pour discuter de projets futurs !',
     portfolios: [
         {
             title: 'HelloBank',
             link: 'https://www.hellobank.fr/fr/ouvrir-un-compte/?types=HBA',
-            gitlab: 'http://hellobank.gregoryzirn.fr/',
             content: 'Formulaire de souscription d\'un compte bancaire chez Hellobank.',
             details: [
                 'Le formulaire se compose d’une landing page sur laquelle les données du prospect sont tout de suite récupérées pour pouvoir le relancer en cas d’abandon',
@@ -56,7 +48,6 @@ module.exports = {
         {
             title: 'BNP Paribas',
             link: 'https://mabanque.bnpparibas/fr/ouvrir-un-compte/?agence=EERI',
-            gitlab: 'http://bnpparibas.gregoryzirn.fr/',
             content: 'Formulaire d\'ouverture de compte BNP Paribas 9 minutes',
             details: [
                 'Le client BNP Paribas nous a sollicité afin de pouvoir se positionner sur le marché du compte bancaire en 9 minutes ! Donc c’est la première contrainte technique. Mais le formulaire reste sensiblement le meme.',
@@ -67,12 +58,12 @@ module.exports = {
             alt: 'BNP Paribas'
         },
         {
-            title: 'Le comptoir des saveurs.',
-            link: 'img/portfolio/flyers_comptoir_des_saveurs.png',
-            content: 'Réalisation d\'un Flyers pour le restaurant Le comptoir des saveurs à l\'aide de Photoshop, InDesign et un bon massicot',
-            details: ['Recto verso au format A5 300 pixels/pouce', 'Création du design en accord avec la charte graphique', 'Impression et découpage'],
-            src: 'img/portfolio/flyers_comptoir_des_saveurs_preview.png',
-            alt: 'Flyers Comptoir des saveurs'
+            title: 'Le Point.',
+            link: 'https://www.lepoint.fr/',
+            content: 'Développeur/Intégrateur web',
+            details: ['Compétences webmastering, SEO, SEA', 'AB/test pour l’abonnement (paywall) avec Kameleoon', 'Gestion CMP Sourcepoint. Rgpd, bannière de cookies', 'Utilisation et implémentation de PDM AT internet', 'Intégrations de script partenaire. (taboola, sirdata, beops, ajout key/value pour google ads)', 'Édition d’articles pour les journalistes'],
+            src: 'img/portfolio/lepoint.png',
+            alt: 'Le Point'
         },
         {
             title: 'La maison de l\'architecte.',
@@ -91,162 +82,71 @@ module.exports = {
             alt: 'La maison de l\'architecture'
         },
         {
-            title: 'Générateur de formulaires.',
-            link: 'http://formulaires.gregoryzirn.fr/',
-            content: 'L’utilisateur peut créer des formulaires personnalisés en cliquant sur les boutons Label, Zone de texte et Bouton, et en fournissant les renseignements demandés',
-            details: ['Utilisation des méthodes <strong>after()</strong> et <strong>append()</strong> qui permettent toutes deux d\'injecter du contenu dans le <strong>DOM</strong>, mais d\'une façon légèrement différente', 'Prévoir un conteneur pour la partie création afin de les supprimer facilement avec la methode <strong>remove()</strong>', 'Un peu de css pour les marges et couleurs'],
-            src: 'img/portfolio/generateur_de_formulaires.png',
-            alt: 'Générateur de formulaires'
-        },
-        {
             title: 'Jeu de plateau Javascript.',
             link: 'http://jeuplateau.gregoryzirn.fr/',
             content: '<strong>Stack technique</strong>',
             details: ['HTML CSS', 'Les bases de JavaScript (variables, conditions, boucles, évènements)', 'La <strong>programmation orientée objet</strong> en JavaScript', 'Dissocier les <strong>calculs "métier"</strong> du jeu (est-ce que le joueur a le droit d\'aller sur cette case ?) avec la <strong>mise à jour de l\'interface</strong>', 'Séparer autant que possible les codes ayant des rôles différents dans des fichiers JavaScript différents'],
             src: 'img/portfolio/Jeu_de_plateau.png',
             alt: 'Jeu de plateau'
-        },
-        {
-            title: 'Blog de Zozor',
-            link: 'http://blogzozor.gregoryzirn.fr/',
-            content: 'Premier mooc d\'openclassrooms autour des langages <strong>HTML5</strong> et CSS3. Ceci est le premier TP du tutoriel.',
-            details: ['Rappel sur la <strong>mise en page</strong> (en-tête, corps de page, pied de page)', 'Utilisation des <strong>balises html5</strong> et sensibilisation de leurs rôles <strong>sémantiques</strong>', 'Utilisation des <strong>propriétés CSS3</strong> pour le design et aussi pour le positionnement'],
-            src: 'img/portfolio/blog_zozor.png',
-            alt: 'Blog de Zozor'
-        },
-        {
-            title: 'CV de Zozor',
-            link: 'http://cvzozor.gregoryzirn.fr/',
-            content: 'Premier mooc d\'openclassrooms autour des langages <strong>HTML5</strong> et CSS3.Ceci est le premier TP du tutoriel.',
-            details: ['Rappel sur la <strong>mise en page</strong> (en-tête, corps de page, pied de page)', 'Utilisation des <strong>balises html5</strong> et sensibilisation de leurs rôles <strong>sémantiques</strong>', 'Utilisation des <strong>propriétés CSS3</strong> pour le design et aussi pour le positionnement'],
-            src: 'img/portfolio/cv_zozor.png',
-            alt: 'CV de zozor'
         }
     ],
-    codes: [
+    parcours: [
         {
-            title: 'Html5 et css3',
-            tx_reussite: 89,
-            src: 'img/certifications/html_css.png',
-            alt: 'HTML et CSS',
-            file: 'files/certifications/html_css.pdf',
-            details: ['Maîtriser les langages <strong>HTML et CSS</strong>', 'Créer des pages web en HTML et CSS', 'Structurer une page web', 'Transformer une <strong>maquette</strong> en page web', 'Envoyer un site en ligne']
-        },
-        {
-            title: 'Javascript',
+            title: 'Disciple du Javascript',
             tx_reussite: 93,
-            src: 'img/certifications/javascript.png',
-            alt: 'Javascript',
-            file: 'files/certifications/javascript.pdf',
-            details: ['Configuration d\'un environnement de travail en ligne avec JSFiddle, JS Bin et CodePen ou en local avec un IDE comme Sublime Text, Atom et Brackets', 'Les variables, conditions et boucles en <strong>javascript</strong>', 'Manipuler et créer des fonctions', 'Tableaux et chaînes de caractères', 'Programmation orientée objet']
-        },
-        {
-            title: 'JQuery',
-            tx_reussite: 95,
-            src: 'img/certifications/jquery.png',
-            alt: 'JQuery',
-            file: 'files/certifications/jquery.pdf',
+            src: 'img/certifications/disciple_javascript.png',
+            alt: 'Disciple du javascript',
+            file: 'files/certifications/disciple_du_javascript.pdf',
             details: [
-                'Sélection d\'éléments en <strong>JQuery</strong>',
-                'Modifier le contenu d\'un élément',
-                'Insérer et remplacer des éléments dans le <strong>DOM</strong>',
-                'Gestion événementielle',
-                'Animations et effets',
-                'Files d\'attente et timer',
-                'Textes et images',
-                'Formulaires et tableaux',
-                'Communications <strong>AJAX</strong>',
-                'Utiliser et créer des <strong>plugins</strong>',
-                '<strong>Déboguer</strong> le code jquery'
+                'Apprenez à coder en Javascript',
+                'Dynamisez vos sites web avec Javascript',
+                'Créez un jeu de plateau tour par tour en Javascript',
+                'Simplifiez vos développements Javascript avec JQuery',
+                'Des applications ultra-rapides avec node.js',
+                'Développez vos applications web avec Angular.js',
+                'Créez une single-page app avec node.js et meteor'
             ]
         },
         {
-            title: 'Node.js',
-            tx_reussite: 95,
-            src: 'img/certifications/node-js.png',
-            alt: 'Node.js',
-            file: 'files/certifications/node-js.pdf',
+            title: 'Le cloud d\'IBM Bluemix',
+            tx_reussite: 91,
+            src: 'img/certifications/deployez_sur_bluemix.png',
+            alt: 'Déployer sur Bluemix',
+            file: 'files/certifications/deployez_vos_applications_node_sur_bluemix.pdf',
             details: [
-                'Les atouts de <strong>node.js</strong>',
-                'Ecouter et créer des évènements',
-                'Fonctions de <strong>callback</strong>',
-                'Créer des modules',
-                'Utiliser <strong>NPM</strong> pour installer des modules',
-                'Utilisation du framework <strong>Express.js</strong> pour la gestion des routes, des templates et des middlewares',
-                'La communication temps réel avec <strong>socket.io</strong>'
+                'Apprenez à coder en Javascript',
+                'Dynamisez vos sites web avec Javascript',
+                'Des applications ultra-rapides avec node.js',
+                'Gérez votre code avec Git et Github',
+                'Déployez des applications dans le cloud avec IBM Bluemix'
             ]
         },
         {
-            title: 'PHP et MySQL',
-            tx_reussite: 72,
-            src: 'img/certifications/php.png',
-            alt: 'PHP',
-            file: 'files/certifications/php_mysql.pdf',
-            details: [
-                'Installation d\'un serveur web local comprenant <strong>Apache</strong> <strong>PHP</strong> et <strong>MySQL</strong>',
-                'Inclure des portions de page',
-                'Les variables, conditions, boucles, fonctions et tableaux',
-                'Transmettre des données par l\'url ou par les formulaires',
-                'Variables superglobales, sessions et cookies',
-                'Stocker et manipuler des informations à l\'aide de MySQL',
-                'Les fonctions, dates et jointures entre tables',
-                'Créer des images en PHP',
-                'Les expressions régulières',
-                'La programmation orientée objet',
-                'Organiser son code selon l\'architecture MVC',
-                'Proteger un dossier avec un .htaccess'
-            ]
-        },
-        {
-            title: 'Bootstrap',
-            tx_reussite: 97,
-            src: 'img/certifications/bootstrap.png',
-            alt: 'Bootstrap',
-            file: 'files/certifications/bootstrap.pdf',
-            details: [
-                'Configurer <strong>Bootstrap</strong>',
-                'Organisation spatiale des éléments à l\'aide de la grille.',
-                'Eléments de base: listes à puces, descriptions, tableaux, formulaires de contact, boutons, icônes et images',
-                'Les composants intégrés: la navigation, effets typographiques, thumbnails, listes groupées, panneaux, médias, alertes et barres de progression',
-                'Les plugins JQuery: menu déroulant, fenêtre modale, onglets, boutons, carrousel, info-bulles et Popover, effet accordéon et le Scrollspy'
-            ]
-        },
-        {
-            title: 'Wordpress',
+            title: 'Intégrateur web',
             tx_reussite: 92,
-            src: 'img/certifications/wordpress.png',
-            alt: 'Wordpress',
-            file: 'files/certifications/wordpress.pdf',
+            src: 'img/certifications/integrateur_web.png',
+            alt: 'Intégrateur web',
+            file: 'files/certifications/integration_web.pdf',
             details: [
-                'La publication d\'articles, de pages, de menus et de medias sous <strong>wordpress</strong>',
-                'Gérer un site participatif',
-                'Développement de thèmes et plugins',
-                'Mise en production',
-                'Amélioration du <strong>référencement</strong>',
-                'Optimisation des performances (cacher les ressources et compresser les fichiers JS et CSS)'
+                'Comprendre le web',
+                'Apprenez à créer votre site web avec HTML5 et CSS3',
+                'Prenez en main Bootstrap',
+                'Gérez votre code avec Git et Github',
+                'Utilisation du framework Express.js pour la gestion des routes, des templates et des middlewares',
+                'La communication temps réel avec socket.io'
             ]
         },
         {
-            title: 'Git',
-            tx_reussite: 84,
-            src: 'img/certifications/git.png',
-            alt: 'Git',
-            file: 'files/certifications/git.pdf',
+            title: 'Lancer son site web',
+            tx_reussite: 89,
+            src: 'img/certifications/lancer_son_site.png',
+            alt: 'Lancer son site web',
+            file: 'files/certifications/lancer_son_site_web.pdf',
             details: [
-                'Effectuer des commits avec <strong>GIT</strong>',
-                'Lire l\'historique',
-                'Se positionner sur un commit donné',
-                'Utilisation de remotes',
-                'Héberger les repositories sur <strong>Github</strong>',
-                'Récupérer du code d\'un autre repository',
-                'Création de repositories',
-                'Envoyer le code sur Github',
-                'Récupérer des modifications',
-                'Créer des branches',
-                'Fusionner des branches',
-                'Résoudre des conflits',
-                'Identifier les auteurs des différents commits',
-                'Ignorer des fichiers'
+                'Comprendre le web',
+                'Apprenez à créer votre site web avec HTML5 et CSS3',
+                'Concevez votre site web avec PHP et MySQL',
+                'Les clés pour réussir son référencement web'
             ]
         }
     ],
@@ -393,63 +293,130 @@ module.exports = {
             ]
         }
     ],
-    parcours: [
+    codes: [
         {
-            title: 'Disciple du Javascript',
-            tx_reussite: 93,
-            src: 'img/certifications/disciple_javascript.png',
-            alt: 'Disciple du javascript',
-            file: 'files/certifications/disciple_du_javascript.pdf',
-            details: [
-                'Apprenez à coder en Javascript',
-                'Dynamisez vos sites web avec Javascript',
-                'Créez un jeu de plateau tour par tour en Javascript',
-                'Simplifiez vos développements Javascript avec JQuery',
-                'Des applications ultra-rapides avec node.js',
-                'Développez vos applications web avec Angular.js',
-                'Créez une single-page app avec node.js et meteor'
-            ]
-        },
-        {
-            title: 'Le cloud d\'IBM Bluemix',
-            tx_reussite: 91,
-            src: 'img/certifications/deployez_sur_bluemix.png',
-            alt: 'Déployer sur Bluemix',
-            file: 'files/certifications/deployez_vos_applications_node_sur_bluemix.pdf',
-            details: [
-                'Apprenez à coder en Javascript',
-                'Dynamisez vos sites web avec Javascript',
-                'Des applications ultra-rapides avec node.js',
-                'Gérez votre code avec Git et Github',
-                'Déployez des applications dans le cloud avec IBM Bluemix'
-            ]
-        },
-        {
-            title: 'Intégrateur web',
-            tx_reussite: 92,
-            src: 'img/certifications/integrateur_web.png',
-            alt: 'Intégrateur web',
-            file: 'files/certifications/integration_web.pdf',
-            details: [
-                'Comprendre le web',
-                'Apprenez à créer votre site web avec HTML5 et CSS3',
-                'Prenez en main Bootstrap',
-                'Gérez votre code avec Git et Github',
-                'Utilisation du framework Express.js pour la gestion des routes, des templates et des middlewares',
-                'La communication temps réel avec socket.io'
-            ]
-        },
-        {
-            title: 'Lancer son site web',
+            title: 'Html5 et css3',
             tx_reussite: 89,
-            src: 'img/certifications/lancer_son_site.png',
-            alt: 'Lancer son site web',
-            file: 'files/certifications/lancer_son_site_web.pdf',
+            src: 'img/certifications/html_css.png',
+            alt: 'HTML et CSS',
+            file: 'files/certifications/html_css.pdf',
+            details: ['Maîtriser les langages <strong>HTML et CSS</strong>', 'Créer des pages web en HTML et CSS', 'Structurer une page web', 'Transformer une <strong>maquette</strong> en page web', 'Envoyer un site en ligne']
+        },
+        {
+            title: 'Javascript',
+            tx_reussite: 93,
+            src: 'img/certifications/javascript.png',
+            alt: 'Javascript',
+            file: 'files/certifications/javascript.pdf',
+            details: ['Configuration d\'un environnement de travail en ligne avec JSFiddle, JS Bin et CodePen ou en local avec un IDE comme Sublime Text, Atom et Brackets', 'Les variables, conditions et boucles en <strong>javascript</strong>', 'Manipuler et créer des fonctions', 'Tableaux et chaînes de caractères', 'Programmation orientée objet']
+        },
+        {
+            title: 'JQuery',
+            tx_reussite: 95,
+            src: 'img/certifications/jquery.png',
+            alt: 'JQuery',
+            file: 'files/certifications/jquery.pdf',
             details: [
-                'Comprendre le web',
-                'Apprenez à créer votre site web avec HTML5 et CSS3',
-                'Concevez votre site web avec PHP et MySQL',
-                'Les clés pour réussir son référencement web'
+                'Sélection d\'éléments en <strong>JQuery</strong>',
+                'Modifier le contenu d\'un élément',
+                'Insérer et remplacer des éléments dans le <strong>DOM</strong>',
+                'Gestion événementielle',
+                'Animations et effets',
+                'Files d\'attente et timer',
+                'Textes et images',
+                'Formulaires et tableaux',
+                'Communications <strong>AJAX</strong>',
+                'Utiliser et créer des <strong>plugins</strong>',
+                '<strong>Déboguer</strong> le code jquery'
+            ]
+        },
+        {
+            title: 'Node.js',
+            tx_reussite: 95,
+            src: 'img/certifications/node-js.png',
+            alt: 'Node.js',
+            file: 'files/certifications/node-js.pdf',
+            details: [
+                'Les atouts de <strong>node.js</strong>',
+                'Ecouter et créer des évènements',
+                'Fonctions de <strong>callback</strong>',
+                'Créer des modules',
+                'Utiliser <strong>NPM</strong> pour installer des modules',
+                'Utilisation du framework <strong>Express.js</strong> pour la gestion des routes, des templates et des middlewares',
+                'La communication temps réel avec <strong>socket.io</strong>'
+            ]
+        },
+        {
+            title: 'PHP et MySQL',
+            tx_reussite: 72,
+            src: 'img/certifications/php.png',
+            alt: 'PHP',
+            file: 'files/certifications/php_mysql.pdf',
+            details: [
+                'Installation d\'un serveur web local comprenant <strong>Apache</strong> <strong>PHP</strong> et <strong>MySQL</strong>',
+                'Inclure des portions de page',
+                'Les variables, conditions, boucles, fonctions et tableaux',
+                'Transmettre des données par l\'url ou par les formulaires',
+                'Variables superglobales, sessions et cookies',
+                'Stocker et manipuler des informations à l\'aide de MySQL',
+                'Les fonctions, dates et jointures entre tables',
+                'Créer des images en PHP',
+                'Les expressions régulières',
+                'La programmation orientée objet',
+                'Organiser son code selon l\'architecture MVC',
+                'Proteger un dossier avec un .htaccess'
+            ]
+        },
+        {
+            title: 'Bootstrap',
+            tx_reussite: 97,
+            src: 'img/certifications/bootstrap.png',
+            alt: 'Bootstrap',
+            file: 'files/certifications/bootstrap.pdf',
+            details: [
+                'Configurer <strong>Bootstrap</strong>',
+                'Organisation spatiale des éléments à l\'aide de la grille.',
+                'Eléments de base: listes à puces, descriptions, tableaux, formulaires de contact, boutons, icônes et images',
+                'Les composants intégrés: la navigation, effets typographiques, thumbnails, listes groupées, panneaux, médias, alertes et barres de progression',
+                'Les plugins JQuery: menu déroulant, fenêtre modale, onglets, boutons, carrousel, info-bulles et Popover, effet accordéon et le Scrollspy'
+            ]
+        },
+        {
+            title: 'Wordpress',
+            tx_reussite: 92,
+            src: 'img/certifications/wordpress.png',
+            alt: 'Wordpress',
+            file: 'files/certifications/wordpress.pdf',
+            details: [
+                'La publication d\'articles, de pages, de menus et de medias sous <strong>wordpress</strong>',
+                'Gérer un site participatif',
+                'Développement de thèmes et plugins',
+                'Mise en production',
+                'Amélioration du <strong>référencement</strong>',
+                'Optimisation des performances (cacher les ressources et compresser les fichiers JS et CSS)'
+            ]
+        },
+        {
+            title: 'Git',
+            tx_reussite: 84,
+            src: 'img/certifications/git.png',
+            alt: 'Git',
+            file: 'files/certifications/git.pdf',
+            details: [
+                'Effectuer des commits avec <strong>GIT</strong>',
+                'Lire l\'historique',
+                'Se positionner sur un commit donné',
+                'Utilisation de remotes',
+                'Héberger les repositories sur <strong>Github</strong>',
+                'Récupérer du code d\'un autre repository',
+                'Création de repositories',
+                'Envoyer le code sur Github',
+                'Récupérer des modifications',
+                'Créer des branches',
+                'Fusionner des branches',
+                'Résoudre des conflits',
+                'Identifier les auteurs des différents commits',
+                'Ignorer des fichiers'
             ]
         }
     ]

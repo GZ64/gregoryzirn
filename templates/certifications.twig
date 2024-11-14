@@ -3,27 +3,27 @@
         <h3 class="left-align">CERTIFICATIONS</h3>
         <div class="col s12">
             <ul class="tabs">
-                <li class="tab col s3"><a class="active" href="#dev">Code</a></li>
+                <li class="tab col s3"><a class="active" href="#parcours">Parcours</a></li>
                 <li class="tab col s3"><a href="#web">Environnement</a></li>
                 <li class="tab col s3"><a href="#systeme">Systeme</a></li>
-                <li class="tab col s3"><a href="#parcours">Parcours</a></li>
+                <li class="tab col s3"><a href="#dev">Code</a></li>
             </ul>
         </div>
-        <div id="dev" class="col s12">
+        <div id="parcours" class="col s12">
             <ul>
-                {% for code in codes %}
+                {% for parcour in parcours %}
                     <li class="col s6 m6 l4">
                         <div class="card small">
                             <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="{{ code.src }}" alt="{{ code.alt }}" />
+                                <img class="activator" src="{{ parcour.src }}" alt="{{ parcour.alt }}" />
                             </div>
                             <div class="card-content">
                                 <span class="card-title activator grey-text text-darken-2 truncate">
-                                    {{ code.title }}
+                                    {{ parcour.title }}
                                 </span>
-                                <i class="activator material-icons right">more_vert</i>
+                                <i class="material-icons right">more_vert</i>
                                 <p class="grey-text text-darken-2">
-                                    <a class="card-link" href="{{ code.file }}" target="_blank" >
+                                    <a class="card-link" href="{{ parcour.file }}" target="_blank" >
                                         <i class="material-icons eyeIcon">remove_red_eye</i>
                                     </a>
                                 </p>
@@ -31,7 +31,7 @@
                             <div class="card-reveal">
                                 <span class="card-title grey-text text-darken-2">Acquis<i class="material-icons right">close</i></span>
                                 <ul class="collection grey-text text-darken-2">
-                                    {% for detail in code.details %}
+                                    {% for detail in parcour.details %}
                                         <li class="collection-item">{{ detail }}</li>
                                     {% endfor %}
                                 </ul>
@@ -40,7 +40,7 @@
                     </li>
                 {% endfor %}
             </ul>
-            <a href="#" id="programmeur" class="btn-floating btn-large waves-effect waves-light plus"><i class="material-icons">add</i></a>
+            <a href="#" id="cursus" class="btn-floating btn-large waves-effect waves-light plus"><i class="material-icons">add</i></a>
         </div>
         <div id="web" class="col s12">
             <ul>
@@ -108,21 +108,21 @@
             </ul>
             <a href="#" id="systemeBtn" class="btn-floating btn-large waves-effect waves-light plus"><i class="material-icons">add</i></a>
         </div>
-        <div id="parcours" class="col s12">
+        <div id="dev" class="col s12">
             <ul>
-                {% for parcour in parcours %}
+                {% for code in codes %}
                     <li class="col s6 m6 l4">
                         <div class="card small">
                             <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="{{ parcour.src }}" alt="{{ parcour.alt }}" />
+                                <img class="activator" src="{{ code.src }}" alt="{{ code.alt }}" />
                             </div>
                             <div class="card-content">
                                 <span class="card-title activator grey-text text-darken-2 truncate">
-                                    {{ parcour.title }}
+                                    {{ code.title }}
                                 </span>
-                                <i class="material-icons right">more_vert</i>
+                                <i class="activator material-icons right">more_vert</i>
                                 <p class="grey-text text-darken-2">
-                                    <a class="card-link" href="{{ parcour.file }}" target="_blank" >
+                                    <a class="card-link" href="{{ code.file }}" target="_blank" >
                                         <i class="material-icons eyeIcon">remove_red_eye</i>
                                     </a>
                                 </p>
@@ -130,7 +130,7 @@
                             <div class="card-reveal">
                                 <span class="card-title grey-text text-darken-2">Acquis<i class="material-icons right">close</i></span>
                                 <ul class="collection grey-text text-darken-2">
-                                    {% for detail in parcour.details %}
+                                    {% for detail in code.details %}
                                         <li class="collection-item">{{ detail }}</li>
                                     {% endfor %}
                                 </ul>
@@ -139,7 +139,7 @@
                     </li>
                 {% endfor %}
             </ul>
-            <a href="#" id="cursus" class="btn-floating btn-large waves-effect waves-light plus"><i class="material-icons">add</i></a>
+            <a href="#" id="programmeur" class="btn-floating btn-large waves-effect waves-light plus"><i class="material-icons">add</i></a>
         </div>
     </div>
 </div>
