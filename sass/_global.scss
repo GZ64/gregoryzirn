@@ -13,14 +13,12 @@ p {
 
 #qui_suis_je strong,
 #competences strong,
-#certifications strong {
+#certifications strong,
+.collection-item strong {
   color: $primary-color
 }
 #portfolio > strong {
   color: #fff;
-}
-.collection-item strong {
-  color: $primary-color
 }
 
 /* bouton home */
@@ -52,4 +50,12 @@ p {
 
 .card .card-title {
   font-size: rem-calc(20);
+}
+
+.IN-widget {
+  display: none !important;
+}
+
+#back-to-home {
+  margin: 10px;
 }

@@ -3,6 +3,9 @@
   //  width: 83%;
   //}
   background-color: $primary-color;
+  #glide {
+    margin-top: 20px;
+  }
   .eyeIcon {
     margin-right: 10px;
   }
@@ -14,6 +17,9 @@
     position: relative;
     bottom: 1em;
     transform: translateX(-80%);
+  }
+  .glide__arrow, .glide__bullets {
+    margin-top: 20px;
   }
   .card-content i {
     cursor: pointer;
