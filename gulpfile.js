@@ -24,7 +24,7 @@ const zip = require('gulp-zip');
 const git = require('gulp-git');
 const cnx = require('./content/cnx');
 const ftp = require( 'vinyl-ftp' );
-
+const { templateEngine } = require( '@niuxe/template-engine' );
 function getSrc(globPattern, options = {}) {
     return src(globPattern, { sourcemaps: true,  ...options });
 }
@@ -46,11 +46,18 @@ function sass() {
         .pipe(dest('./css', { sourcemaps: true }));
 }
 
+// function twig() {
+//     return getSrc('./templates/index.twig', { since: lastRun(twig) })
+//         .pipe(gulpTwig({
+//             data: content
+//         }))
+//         .pipe(dest('./'));
+// }
+
+// const engine = new TemplateEngine();
 function twig() {
     return getSrc('./templates/index.twig', { since: lastRun(twig) })
-        .pipe(gulpTwig({
-            data: content
-        }))
+        .pipe(templateEngine.render(`<h1>test</h1>`, content))
         .pipe(dest('./'));
 }
 
