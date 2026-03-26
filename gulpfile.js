@@ -60,7 +60,7 @@ function clean() {
 
 async function img() {
     try {
-        return getSrc('img/**/*', { since: lastRun(img) })
+        return getSrc('img/**/*', { since: lastRun(img), encoding: false })
             .pipe(cache(imagemin()))
             .pipe(dest('dist/img'));
     } catch (error) {
@@ -69,12 +69,12 @@ async function img() {
 }
 
 function fonts() {
-    return getSrc("fonts/**/*.*", { since: lastRun(fonts) })
+    return getSrc("fonts/**/*.*", { since: lastRun(fonts), encoding: false })
         .pipe(dest('dist/fonts'));
 }
 
 function files() {
-    return getSrc("files/**/*.*", { since: lastRun(files) })
+    return getSrc("files/**/*.*", { since: lastRun(files), encoding: false })
         .pipe(dest('dist/files'));
 }
 
