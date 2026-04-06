@@ -24,7 +24,7 @@ const zip = require('gulp-zip');
 const git = require('gulp-git');
 const cnx = require('./content/cnx');
 const ftp = require( 'vinyl-ftp' );
-const { templateEngine } = require( '@niuxe/template-engine' );
+
 function getSrc(globPattern, options = {}) {
     return src(globPattern, { sourcemaps: true,  ...options });
 }
@@ -46,18 +46,11 @@ function sass() {
         .pipe(dest('./css', { sourcemaps: true }));
 }
 
-// function twig() {
-//     return getSrc('./templates/index.twig', { since: lastRun(twig) })
-//         .pipe(gulpTwig({
-//             data: content
-//         }))
-//         .pipe(dest('./'));
-// }
-
-// const engine = new TemplateEngine();
 function twig() {
     return getSrc('./templates/index.twig', { since: lastRun(twig) })
-        .pipe(templateEngine.render(`<h1>test</h1>`, content))
+        .pipe(gulpTwig({
+            data: content
+        }))
         .pipe(dest('./'));
 }
 
@@ -67,8 +60,15 @@ function clean() {
 
 async function img() {
     try {
-        return getSrc('img/**/*', { since: lastRun(img) })
-            .pipe(cache(imagemin()))
+        return getSrc('img/**/*', {
+            buffer: true,
+            encoding: false
+        })
+            .pipe(cache(imagemin([
+                imagemin.mozjpeg({ quality: 80, progressive: true }),
+                imagemin.optipng({ optimizationLevel: 2 }),
+                imagemin.svgo()
+            ])))
             .pipe(dest('dist/img'));
     } catch (error) {
         console.error('Error in img task:', error);
@@ -81,7 +81,11 @@ function fonts() {
 }
 
 function files() {
-    return getSrc("files/**/*.*", { since: lastRun(files) })
+    return getSrc("files/**/*.*", {
+        since: lastRun(files),
+        buffer: true,
+        encoding: false
+    })
         .pipe(dest('dist/files'));
 }
 
@@ -189,8 +193,8 @@ function watcher() {
 
 function prod() {
     return getSrc('dist/**/*', { since: lastRun(prod) })
-    .pipe(zip('dist.zip'))
-    .pipe(dest('.'));
+        .pipe(zip('dist.zip'))
+        .pipe(dest('.'));
 }
 
 async function push() {

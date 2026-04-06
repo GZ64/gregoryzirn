@@ -1,0 +1,13 @@
+#mise en cache pendant 1 mois
+Header add Cache-Control "max-age=2592000"
+#erreur
+#ErrorDocument 401 /erreurs/erreur_401.php
+#ErrorDocument 403 /erreurs/erreur_403.php
+ErrorDocument 404 /erreurs/404.php
+#ErrorDocument 500 /erreurs/erreur_500.php
+#redirection vers l'index
+DirectoryIndex index.html 404.php
+# rendre inaccessible le repertoire git
+RedirectMatch 404 /\.git
+
+#redirection 301
