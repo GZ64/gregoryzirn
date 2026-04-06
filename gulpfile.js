@@ -22,7 +22,7 @@ const minifyCss = require('gulp-clean-css');
 const livereload = require('gulp-livereload');
 const zip = require('gulp-zip');
 const git = require('gulp-git');
-const cnx = require('./content/cnx');
+// const cnx = require('./content/cnx');
 const ftp = require( 'vinyl-ftp' );
 
 function getSrc(globPattern, options = {}) {
@@ -211,13 +211,13 @@ async function deploy() {
         'dist/**',
     ];
 
-    cnx.log = log;
-    try {
-        var conn = await ftp.create( cnx );
-        console.log('connected to ftp');
-    } catch (err) {
-        console.error('Error during connecting to ftp:', err);
-    }
+    // cnx.log = log;
+    // try {
+    //     var conn = await ftp.create( cnx );
+    //     console.log('connected to ftp');
+    // } catch (err) {
+    //     console.error('Error during connecting to ftp:', err);
+    // }
 
     // using base = '.' will transfer everything to /public_html correctly
     // turn off buffering in gulp.src for best performance

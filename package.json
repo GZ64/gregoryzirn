@@ -42,6 +42,5 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "@niuxe/template-engine": "^1.4.0"
   }
 }
