@@ -76,7 +76,11 @@ async function img() {
 }
 
 function fonts() {
-    return getSrc("fonts/**/*.*", { since: lastRun(fonts) })
+    return getSrc("fonts/**/*.*", {
+        since: lastRun(fonts),
+        buffer: true,
+        encoding: false
+    })
         .pipe(dest('dist/fonts'));
 }
 
@@ -109,7 +113,7 @@ function generateFavicons(done) {
         appDescription: "App description",
         developerName: "Your Name",
         developerURL: "https://yourwebsite.com",
-        path: "/",
+        path: "./",
         dir: "auto",
         lang: "en-US",
         icons: {
@@ -165,10 +169,14 @@ function injectFavicons() {
     const faviconFile = file('./dist/favicon.html', fs.readFileSync(faviconHtmlPath), { src: true });
 
     // Cible : index.html où nous allons injecter les favicons
-    return getSrc('./index.html', {since: lastRun(injectFavicons), read: true})
+    return getSrc('./index.html', {since:
+            lastRun(injectFavicons),
+            read: true
+    })
         .pipe(inject(faviconFile, {
             starttag: '<!-- inject:head:html -->',
             transform: function (filePath, file) {
+                console.log('file', file);
                 return file.contents.toString(); // Injecter le contenu des favicons
             }
         }))

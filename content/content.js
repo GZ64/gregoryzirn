@@ -1,6 +1,6 @@
 module.exports = {
     title: 'Grégory Zirn',
-    age: '43ans',
+    age: '44ans',
     phone: '07.45.09.09.72',
     mail: 'gregoryzirn@gmail.com',
     country: 'FRANCE',
@@ -108,20 +108,6 @@ module.exports = {
             ]
         },
         {
-            title: 'Le cloud d\'IBM Bluemix',
-            tx_reussite: 91,
-            src: 'img/certifications/deployez_sur_bluemix.png',
-            alt: 'Déployer sur Bluemix',
-            file: 'files/certifications/deployez_vos_applications_node_sur_bluemix.pdf',
-            details: [
-                'Apprenez à coder en Javascript',
-                'Dynamisez vos sites web avec Javascript',
-                'Des applications ultra-rapides avec node.js',
-                'Gérez votre code avec Git et Github',
-                'Déployez des applications dans le cloud avec IBM Bluemix'
-            ]
-        },
-        {
             title: 'Intégrateur web',
             tx_reussite: 92,
             src: 'img/certifications/integrateur_web.png',
@@ -134,6 +120,47 @@ module.exports = {
                 'Gérez votre code avec Git et Github',
                 'Utilisation du framework Express.js pour la gestion des routes, des templates et des middlewares',
                 'La communication temps réel avec socket.io'
+            ]
+        },
+        {
+            title: 'Référencement web',
+            tx_reussite: 95,
+            src: 'img/certifications/referencement_web.png',
+            alt: 'Référencement web',
+            file: 'files/certifications/referencement_web.pdf',
+            details: [
+                'Le référencement dans le contexte du <strong>webmarketing</strong>',
+                '<strong>Référencement naturel</strong> et <strong>référencement payant</strong>',
+                'Les moteurs de recherche',
+                'La pertinence et la notoriété d\'une page web',
+                'Définir des mots clés',
+                'Lister les mots clés',
+                'Analyser les recherches des internautes',
+                'Repérer les mots clés des concurrents',
+                'Présentation du contenant',
+                'Optimisation technique du contenant',
+                'L\'unicité du contenu',
+                'Utilisation des outils <strong>SenSEO</strong> <strong>Semrush</strong> et <strong>google adwords</strong>',
+                'Gestion des liens entrant et sortant'
+            ]
+        },
+        {
+            title: 'Start-up',
+            tx_reussite: 73,
+            src: 'img/certifications/decouvrez_le_monde_des_start_ups.png',
+            alt: 'Les start-ups',
+            file: 'files/certifications/start-ups.pdf',
+            details: [
+                'Les caractéristiques principales d\'une <strong>start-up</strong>',
+                'Les modèles économique des start-ups',
+                'Le mode de fonctionnement d\'une start-up',
+                'Envisager l\'échec',
+                'L\'état d\'esprit d\'un entrepreneur',
+                'L\'écosystème des start-ups',
+                'S\'informer et structurer sa veille',
+                'L\'immersion dans un incubateur',
+                'Trouver, développer, tester et donner vie à une idée',
+                'Le parcours d\'un entrepreneur'
             ]
         },
         {
@@ -170,25 +197,6 @@ module.exports = {
             ]
         },
         {
-            title: 'Start-up',
-            tx_reussite: 73,
-            src: 'img/certifications/decouvrez_le_monde_des_start_ups.png',
-            alt: 'Les start-ups',
-            file: 'files/certifications/start-ups.pdf',
-            details: [
-                'Les caractéristiques principales d\'une <strong>start-up</strong>',
-                'Les modèles économique des start-ups',
-                'Le mode de fonctionnement d\'une start-up',
-                'Envisager l\'échec',
-                'L\'état d\'esprit d\'un entrepreneur',
-                'L\'écosystème des start-ups',
-                'S\'informer et structurer sa veille',
-                'L\'immersion dans un incubateur',
-                'Trouver, développer, tester et donner vie à une idée',
-                'Le parcours d\'un entrepreneur'
-            ]
-        },
-        {
             title: 'Devenir mentor',
             tx_reussite: 97,
             src: 'img/certifications/devenir_mentor.png',
@@ -204,48 +212,21 @@ module.exports = {
             ]
         },
         {
-            title: 'Référencement web',
-            tx_reussite: 95,
-            src: 'img/certifications/referencement_web.png',
-            alt: 'Référencement web',
-            file: 'files/certifications/referencement_web.pdf',
+            title: 'Le cloud d\'IBM Bluemix',
+            tx_reussite: 91,
+            src: 'img/certifications/deployez_sur_bluemix.png',
+            alt: 'Déployer sur Bluemix',
+            file: 'files/certifications/deployez_vos_applications_node_sur_bluemix.pdf',
             details: [
-                'Le référencement dans le contexte du <strong>webmarketing</strong>',
-                '<strong>Référencement naturel</strong> et <strong>référencement payant</strong>',
-                'Les moteurs de recherche',
-                'La pertinence et la notoriété d\'une page web',
-                'Définir des mots clés',
-                'Lister les mots clés',
-                'Analyser les recherches des internautes',
-                'Repérer les mots clés des concurrents',
-                'Présentation du contenant',
-                'Optimisation technique du contenant',
-                'L\'unicité du contenu',
-                'Utilisation des outils <strong>SenSEO</strong> <strong>Semrush</strong> et <strong>google adwords</strong>',
-                'Gestion des liens entrant et sortant'
+                'Apprenez à coder en Javascript',
+                'Dynamisez vos sites web avec Javascript',
+                'Des applications ultra-rapides avec node.js',
+                'Gérez votre code avec Git et Github',
+                'Déployez des applications dans le cloud avec IBM Bluemix'
             ]
         }
     ],
     systemes: [
-        {
-            title: 'IBM Bluemix',
-            tx_reussite: 92,
-            src: 'img/certifications/bluemix.png',
-            alt: 'Bluemix',
-            file: 'files/certifications/cours_bluemix.pdf',
-            details: [
-                'L\'environnement cloud <strong>d\'IBM Bluemix (IaaS, PaaS et SaaS)</strong>',
-                'Les services de Bluemix',
-                'La tarification',
-                'L\'interface',
-                'Développer un projet avec <strong>DevOps services</strong>',
-                'Installer les outils pour utiliser Bluemix depuis chez soi en ligne de commande',
-                'Configurer les paramètres de l\'application (nombre de serveurs, mémoire) directement depuis les fichiers de l\'application',
-                'Utiliser Git avec Bluemix',
-                'Déployer une application en ligne',
-                'Ajouter des services à une application (<strong>Cloudant</strong>, <strong>Watson</strong> et <strong>Cloud Integration</strong>)'
-            ]
-        },
         {
             title: 'Linux',
             tx_reussite: 95,
@@ -291,45 +272,28 @@ module.exports = {
                 'Les piles et les files',
                 'Les tables de hachage'
             ]
-        }
-    ],
-    codes: [
-        {
-            title: 'Html5 et css3',
-            tx_reussite: 89,
-            src: 'img/certifications/html_css.png',
-            alt: 'HTML et CSS',
-            file: 'files/certifications/html_css.pdf',
-            details: ['Maîtriser les langages <strong>HTML et CSS</strong>', 'Créer des pages web en HTML et CSS', 'Structurer une page web', 'Transformer une <strong>maquette</strong> en page web', 'Envoyer un site en ligne']
         },
         {
-            title: 'Javascript',
-            tx_reussite: 93,
-            src: 'img/certifications/javascript.png',
-            alt: 'Javascript',
-            file: 'files/certifications/javascript.pdf',
-            details: ['Configuration d\'un environnement de travail en ligne avec JSFiddle, JS Bin et CodePen ou en local avec un IDE comme Sublime Text, Atom et Brackets', 'Les variables, conditions et boucles en <strong>javascript</strong>', 'Manipuler et créer des fonctions', 'Tableaux et chaînes de caractères', 'Programmation orientée objet']
-        },
-        {
-            title: 'JQuery',
-            tx_reussite: 95,
-            src: 'img/certifications/jquery.png',
-            alt: 'JQuery',
-            file: 'files/certifications/jquery.pdf',
+            title: 'IBM Bluemix',
+            tx_reussite: 92,
+            src: 'img/certifications/bluemix.png',
+            alt: 'Bluemix',
+            file: 'files/certifications/cours_bluemix.pdf',
             details: [
-                'Sélection d\'éléments en <strong>JQuery</strong>',
-                'Modifier le contenu d\'un élément',
-                'Insérer et remplacer des éléments dans le <strong>DOM</strong>',
-                'Gestion événementielle',
-                'Animations et effets',
-                'Files d\'attente et timer',
-                'Textes et images',
-                'Formulaires et tableaux',
-                'Communications <strong>AJAX</strong>',
-                'Utiliser et créer des <strong>plugins</strong>',
-                '<strong>Déboguer</strong> le code jquery'
+                'L\'environnement cloud <strong>d\'IBM Bluemix (IaaS, PaaS et SaaS)</strong>',
+                'Les services de Bluemix',
+                'La tarification',
+                'L\'interface',
+                'Développer un projet avec <strong>DevOps services</strong>',
+                'Installer les outils pour utiliser Bluemix depuis chez soi en ligne de commande',
+                'Configurer les paramètres de l\'application (nombre de serveurs, mémoire) directement depuis les fichiers de l\'application',
+                'Utiliser Git avec Bluemix',
+                'Déployer une application en ligne',
+                'Ajouter des services à une application (<strong>Cloudant</strong>, <strong>Watson</strong> et <strong>Cloud Integration</strong>)'
             ]
         },
+    ],
+    codes: [
         {
             title: 'Node.js',
             tx_reussite: 95,
@@ -368,33 +332,12 @@ module.exports = {
             ]
         },
         {
-            title: 'Bootstrap',
-            tx_reussite: 97,
-            src: 'img/certifications/bootstrap.png',
-            alt: 'Bootstrap',
-            file: 'files/certifications/bootstrap.pdf',
-            details: [
-                'Configurer <strong>Bootstrap</strong>',
-                'Organisation spatiale des éléments à l\'aide de la grille.',
-                'Eléments de base: listes à puces, descriptions, tableaux, formulaires de contact, boutons, icônes et images',
-                'Les composants intégrés: la navigation, effets typographiques, thumbnails, listes groupées, panneaux, médias, alertes et barres de progression',
-                'Les plugins JQuery: menu déroulant, fenêtre modale, onglets, boutons, carrousel, info-bulles et Popover, effet accordéon et le Scrollspy'
-            ]
-        },
-        {
-            title: 'Wordpress',
-            tx_reussite: 92,
-            src: 'img/certifications/wordpress.png',
-            alt: 'Wordpress',
-            file: 'files/certifications/wordpress.pdf',
-            details: [
-                'La publication d\'articles, de pages, de menus et de medias sous <strong>wordpress</strong>',
-                'Gérer un site participatif',
-                'Développement de thèmes et plugins',
-                'Mise en production',
-                'Amélioration du <strong>référencement</strong>',
-                'Optimisation des performances (cacher les ressources et compresser les fichiers JS et CSS)'
-            ]
+            title: 'Javascript',
+            tx_reussite: 93,
+            src: 'img/certifications/javascript.png',
+            alt: 'Javascript',
+            file: 'files/certifications/javascript.pdf',
+            details: ['Configuration d\'un environnement de travail en ligne avec JSFiddle, JS Bin et CodePen ou en local avec un IDE comme Sublime Text, Atom et Brackets', 'Les variables, conditions et boucles en <strong>javascript</strong>', 'Manipuler et créer des fonctions', 'Tableaux et chaînes de caractères', 'Programmation orientée objet']
         },
         {
             title: 'Git',
@@ -417,6 +360,63 @@ module.exports = {
                 'Résoudre des conflits',
                 'Identifier les auteurs des différents commits',
                 'Ignorer des fichiers'
+            ]
+        },
+        {
+            title: 'Wordpress',
+            tx_reussite: 92,
+            src: 'img/certifications/wordpress.png',
+            alt: 'Wordpress',
+            file: 'files/certifications/wordpress.pdf',
+            details: [
+                'La publication d\'articles, de pages, de menus et de medias sous <strong>wordpress</strong>',
+                'Gérer un site participatif',
+                'Développement de thèmes et plugins',
+                'Mise en production',
+                'Amélioration du <strong>référencement</strong>',
+                'Optimisation des performances (cacher les ressources et compresser les fichiers JS et CSS)'
+            ]
+        },
+        {
+            title: 'Html5 et css3',
+            tx_reussite: 89,
+            src: 'img/certifications/html_css.png',
+            alt: 'HTML et CSS',
+            file: 'files/certifications/html_css.pdf',
+            details: ['Maîtriser les langages <strong>HTML et CSS</strong>', 'Créer des pages web en HTML et CSS', 'Structurer une page web', 'Transformer une <strong>maquette</strong> en page web', 'Envoyer un site en ligne']
+        },
+        {
+            title: 'JQuery',
+            tx_reussite: 95,
+            src: 'img/certifications/jquery.png',
+            alt: 'JQuery',
+            file: 'files/certifications/jquery.pdf',
+            details: [
+                'Sélection d\'éléments en <strong>JQuery</strong>',
+                'Modifier le contenu d\'un élément',
+                'Insérer et remplacer des éléments dans le <strong>DOM</strong>',
+                'Gestion événementielle',
+                'Animations et effets',
+                'Files d\'attente et timer',
+                'Textes et images',
+                'Formulaires et tableaux',
+                'Communications <strong>AJAX</strong>',
+                'Utiliser et créer des <strong>plugins</strong>',
+                '<strong>Déboguer</strong> le code jquery'
+            ]
+        },
+        {
+            title: 'Bootstrap',
+            tx_reussite: 97,
+            src: 'img/certifications/bootstrap.png',
+            alt: 'Bootstrap',
+            file: 'files/certifications/bootstrap.pdf',
+            details: [
+                'Configurer <strong>Bootstrap</strong>',
+                'Organisation spatiale des éléments à l\'aide de la grille.',
+                'Eléments de base: listes à puces, descriptions, tableaux, formulaires de contact, boutons, icônes et images',
+                'Les composants intégrés: la navigation, effets typographiques, thumbnails, listes groupées, panneaux, médias, alertes et barres de progression',
+                'Les plugins JQuery: menu déroulant, fenêtre modale, onglets, boutons, carrousel, info-bulles et Popover, effet accordéon et le Scrollspy'
             ]
         }
     ]
