@@ -22,7 +22,7 @@ const minifyCss = require('gulp-clean-css');
 const livereload = require('gulp-livereload');
 const zip = require('gulp-zip');
 const git = require('gulp-git');
-const cnx = require('./content/cnx');
+// const cnx = require('./content/cnx');
 const ftp = require( 'vinyl-ftp' );
 
 function getSrc(globPattern, options = {}) {
@@ -60,8 +60,20 @@ function clean() {
 
 async function img() {
     try {
+<<<<<<< HEAD
         return getSrc('img/**/*', { since: lastRun(img), encoding: false })
             .pipe(cache(imagemin()))
+=======
+        return getSrc('img/**/*', {
+            buffer: true,
+            encoding: false
+        })
+            .pipe(cache(imagemin([
+                imagemin.mozjpeg({ quality: 80, progressive: true }),
+                imagemin.optipng({ optimizationLevel: 2 }),
+                imagemin.svgo()
+            ])))
+>>>>>>> develop
             .pipe(dest('dist/img'));
     } catch (error) {
         console.error('Error in img task:', error);
@@ -69,13 +81,24 @@ async function img() {
 }
 
 function fonts() {
+<<<<<<< HEAD
     return getSrc("fonts/**/*.*", { since: lastRun(fonts), encoding: false })
+=======
+    return getSrc("fonts/**/*.*", {
+        since: lastRun(fonts),
+        buffer: true,
+        encoding: false
+    })
+>>>>>>> develop
         .pipe(dest('dist/fonts'));
 }
 
 function files() {
-    return getSrc("files/**/*.*", { since: lastRun(files), encoding: false })
-        .pipe(dest('dist/files'));
+    return getSrc("files/**/*.*", {
+        since: lastRun(files),
+        buffer: true,
+        encoding: false
+    }).pipe(dest('dist/files'));
 }
 
 function robots() {
@@ -98,7 +121,7 @@ function generateFavicons(done) {
         appDescription: "App description",
         developerName: "Your Name",
         developerURL: "https://yourwebsite.com",
-        path: "/",
+        path: "./",
         dir: "auto",
         lang: "en-US",
         icons: {
@@ -154,10 +177,14 @@ function injectFavicons() {
     const faviconFile = file('./dist/favicon.html', fs.readFileSync(faviconHtmlPath), { src: true });
 
     // Cible : index.html où nous allons injecter les favicons
-    return getSrc('./index.html', {since: lastRun(injectFavicons), read: true})
+    return getSrc('./index.html', {since:
+            lastRun(injectFavicons),
+            read: true
+    })
         .pipe(inject(faviconFile, {
             starttag: '<!-- inject:head:html -->',
             transform: function (filePath, file) {
+                console.log('file', file);
                 return file.contents.toString(); // Injecter le contenu des favicons
             }
         }))
@@ -182,8 +209,8 @@ function watcher() {
 
 function prod() {
     return getSrc('dist/**/*', { since: lastRun(prod) })
-    .pipe(zip('dist.zip'))
-    .pipe(dest('.'));
+        .pipe(zip('dist.zip'))
+        .pipe(dest('.'));
 }
 
 async function push() {
@@ -200,13 +227,13 @@ async function deploy() {
         'dist/**',
     ];
 
-    cnx.log = log;
-    try {
-        var conn = await ftp.create( cnx );
-        console.log('connected to ftp');
-    } catch (err) {
-        console.error('Error during connecting to ftp:', err);
-    }
+    // cnx.log = log;
+    // try {
+    //     var conn = await ftp.create( cnx );
+    //     console.log('connected to ftp');
+    // } catch (err) {
+    //     console.error('Error during connecting to ftp:', err);
+    // }
 
     // using base = '.' will transfer everything to /public_html correctly
     // turn off buffering in gulp.src for best performance
