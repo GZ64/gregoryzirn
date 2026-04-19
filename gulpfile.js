@@ -36,8 +36,7 @@ function webpack() {
             output: {
                 filename: 'main.js',
             },
-        }))
-        .pipe(dest('output/'));
+        })).pipe(dest('output/'));
 }
 
 function sass() {
@@ -60,21 +59,14 @@ function clean() {
 
 async function img() {
     try {
-<<<<<<< HEAD
-        return getSrc('img/**/*', { since: lastRun(img), encoding: false })
-            .pipe(cache(imagemin()))
-=======
         return getSrc('img/**/*', {
             buffer: true,
             encoding: false
-        })
-            .pipe(cache(imagemin([
+        }).pipe(cache(imagemin([
                 imagemin.mozjpeg({ quality: 80, progressive: true }),
                 imagemin.optipng({ optimizationLevel: 2 }),
                 imagemin.svgo()
-            ])))
->>>>>>> develop
-            .pipe(dest('dist/img'));
+            ]))).pipe(dest('dist/img'));
     } catch (error) {
         console.error('Error in img task:', error);
     }
