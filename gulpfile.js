@@ -81,16 +81,11 @@ async function img() {
 }
 
 function fonts() {
-<<<<<<< HEAD
-    return getSrc("fonts/**/*.*", { since: lastRun(fonts), encoding: false })
-=======
     return getSrc("fonts/**/*.*", {
         since: lastRun(fonts),
         buffer: true,
         encoding: false
-    })
->>>>>>> develop
-        .pipe(dest('dist/fonts'));
+    }).pipe(dest('dist/fonts'));
 }
 
 function files() {
