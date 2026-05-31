@@ -7,9 +7,11 @@ module.exports = {
     linkedin: 'https://www.linkedin.com/in/gregory-zirn/',
     github: 'https://github.com/GZ64/',
     subTitle: 'Développeur web - Symfony - React.js',
-    intro: 'Développeur web expérimenté, je me spécialise dans la création de solutions digitales robustes et innovantes. Depuis 2017, je mets en œuvre mes compétences pour concevoir des sites web et des applications répondant aux besoins spécifiques de chaque client, en me concentrant sur l\'expérience utilisateur et la performance. Mon expertise technique s\'étend du développement front-end au back-end, avec une approche centrée sur l\'optimisation et la maintenabilité des projets. Fort d\'une licence de chef de projet obtenue en 2018, je suis toujours à l\'écoute de nouvelles opportunités dans le secteur numérique pour apporter mon expertise dans des projets ambitieux et collaboratifs. Ma passion pour les technologies modernes et mon engagement dans chaque mission assurent un résultat à la hauteur des exigences actuelles du marché digital.',
+    // intro: 'Développeur web expérimenté, je me spécialise dans la création de solutions digitales robustes et innovantes. Depuis 2017, je mets en œuvre mes compétences pour concevoir des sites web et des applications répondant aux besoins spécifiques de chaque client, en me concentrant sur l\'expérience utilisateur et la performance. Mon expertise technique s\'étend du développement front-end au back-end, avec une approche centrée sur l\'optimisation et la maintenabilité des projets. Fort d\'une licence de chef de projet obtenue en 2018, je suis toujours à l\'écoute de nouvelles opportunités dans le secteur numérique pour apporter mon expertise dans des projets ambitieux et collaboratifs. Ma passion pour les technologies modernes et mon engagement dans chaque mission assurent un résultat à la hauteur des exigences actuelles du marché digital.',
+    intro: 'Développeur web expérimenté depuis 2017, je souhaite aujourd’hui consolider mes compétences techniques et stratégiques en intégrant une formation de niveau mastère en développement fullstack à compter de septembre 2026. Fort d’une licence de chef de projet (2018), j’ai conçu et réalisé de nombreux sites web et applications centrés sur l’expérience utilisateur, la performance et la maintenabilité des solutions. Mon expertise couvre l’ensemble du spectre fullstack, du front-end au back-end, avec une approche rigoureuse de l’optimisation et de la qualité logicielle. Souhaitant donner un nouveau cap à ma carrière par l’alternance, je suis à la recherche d’une entreprise prête à m’accueillir pour une période en contrat d’apprentissage ou professionnalisation, en parallèle de mon mastère. Passionné par les technologies modernes, impliqué et orienté résultats, je souhaite mettre mon expérience terrain au service de projets ambitieux et collaboratifs, tout en montant en compétence sur les architectures avancées et les environnements cloud.',
     resume: 'Mon parcours m\'a permis de maîtriser un large éventail de compétences techniques et professionnelles. En front-end, je me spécialise en HTML, CSS, JavaScript (ES6), et frameworks modernes comme React et AngularJS. En back-end, mes compétences en PHP, Symfony, et Node.js me permettent de développer des applications robustes et scalables. Je suis également expérimenté en gestion de bases de données MySQL, administration de systèmes Linux, et en intégration continue avec Docker et Git.',
-    contact:'Je suis actuellement disponible et prêt à m\'engager sur de nouveaux projets en développement web. Ouvert aux opportunités, je suis enthousiaste à l\'idée de mettre mes compétences et mon expérience au service de missions stimulantes et de rejoindre une équipe ambitieuse. N\'hésitez pas à me contacter pour discuter de vos besoins en matière de développement ou pour toute collaboration professionnelle.',
+    // contact:'Je suis actuellement disponible et prêt à m\'engager sur de nouveaux projets en développement web. Ouvert aux opportunités, je suis enthousiaste à l\'idée de mettre mes compétences et mon expérience au service de missions stimulantes et de rejoindre une équipe ambitieuse. N\'hésitez pas à me contacter pour discuter de vos besoins en matière de développement ou pour toute collaboration professionnelle.',
+    contact:'Je suis actuellement disponible et prêt à m\'engager pour une alternance sur de nouveaux projets en développement web. Ouvert aux opportunités, je suis enthousiaste à l\'idée de mettre mes compétences et mon expérience au service de missions stimulantes et de rejoindre une équipe ambitieuse. N\'hésitez pas à me contacter pour en discuter.',
     skills: [
         {name: 'symfony', score: '90'},
         {name: 'react', score: '90'},
@@ -64,6 +66,22 @@ module.exports = {
             details: ['Compétences webmastering, SEO, SEA', 'AB/test pour l’abonnement (paywall) avec Kameleoon', 'Gestion CMP Sourcepoint. Rgpd, bannière de cookies', 'Utilisation et implémentation de PDM AT internet', 'Intégrations de script partenaire. (taboola, sirdata, beops, ajout key/value pour google ads)', 'Édition d’articles pour les journalistes'],
             src: 'img/portfolio/lepoint.png',
             alt: 'Le Point'
+        },
+        {
+            title: 'Tetris.',
+            link: 'https://tetris.gregoryzirn.fr/',
+            content: 'Jeu du tetris développé en Angular JS et Node JS',
+            details: ['Création d\'application SPA avec AngularJS', 'Configuration du routage et des vues', 'Gestion de la logique métier dans les contrôleurs', 'Création de services pour la communication API', 'Liaison des données entre vue et modèle', 'Utilisation de ng-click, ng-show, ng-repeat, ng-disabled', 'Gestion des données et événements entre contrôleurs', 'Animation et boucle de jeu asynchrone', 'Injection des services AngularJS', 'HTML5 Canvas API'],
+            src: 'img/portfolio/tetris.png',
+            alt: 'Tetris'
+        },
+        {
+            title: 'Memory.',
+            link: 'https://memory-game.gregoryzirn.fr/',
+            content: 'Jeu du memory développé en React JS et Node JS',
+            details: ['Création de composants fonctionnels avec Hooks (useState, useEffect, useCallback)', 'Gestion des états locaux et partagés entre composants', 'Communication parent-enfant et réutilisation de composants', 'Maîtrise des effets de bord et du cycle de vie React', 'Rendu conditionnel basé sur l\'état de l\'application', 'Création d\'API RESTful, routage, middleware', 'Configuration des politiques de partage de ressources', 'Méthodes GET, POST, validation des données', 'Création et gestion de base de données relationnelle'],
+            src: 'img/portfolio/memory.png',
+            alt: 'Memory'
         },
         {
             title: 'La maison de l\'architecte.',
